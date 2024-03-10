@@ -1,1 +1,24 @@
-<p>card works!</p>
+<div class="container">
+    <header>
+        <div>
+            <button class="lang_bt" *ngIf="card_type=='input'">detectar idioma</button>
+            <button class="lang_bt">botão</button>
+            <button class="lang_bt">botão</button>
+            <button class="lang_bt">botão</button>
+        </div>
+        <button class="square_bt" *ngIf="card_type=='output'">b</button>
+    </header>
+    <textarea name="" id="" cols="50" rows="10"  ></textarea>
+    <div class="botton_menu">
+        <div>
+            <button class="square_bt">a</button>
+            <button class="square_bt">
+                <i class="fa-solid fa-volume"></i>
+            </button>
+        </div>
+        <div class="run" *ngIf="card_type=='input'">
+            <span>xx/xx</span>
+            <button>A Translate</button>
+        </div>
+    </div>
+</div>
