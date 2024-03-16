@@ -1,9 +1,11 @@
 
+<h2> {{texto}} </h2>
 <main>
-  <app-card card_type="input"></app-card>
+  <app-card (digitado)="receber($event)" card_type="input"></app-card>
   <app-card card_type="output"></app-card>
 </main>
 
 
 
 <router-outlet></router-outlet>
+
