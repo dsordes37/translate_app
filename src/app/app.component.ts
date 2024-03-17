@@ -7,17 +7,17 @@ import { Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'translate_app';
-  texto?:string
- 
+  text:string=''
+  
+  
 
   constructor(){
   }
 
   ngOnInit(){
-    this.texto=''
   }
 
-  receber(valor:string){
-    this.texto=valor
+  getText(valor:string){
+    this.text=valor
   }
 }

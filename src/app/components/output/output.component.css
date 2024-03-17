@@ -1,0 +1,87 @@
+*{
+    font-size: clamp(.8rem, 1.5vw, 1rem);
+}
+.container{
+
+    min-height: 18rem;
+    width: clamp( 250px ,90vw, 35rem);
+    
+    padding: 2rem;
+    
+
+    border-radius: 2rem;
+
+    background-color: #121826cc;
+
+    border: 1px solid #959ba1;
+
+    backdrop-filter: blur(10px);
+
+
+    position: relative;
+    
+}header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 2rem;
+    border-bottom: 1px solid #959ba1;
+}button{
+    background-color: transparent;
+    border: none;
+    color: #959ba1;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: .5rem;
+    
+}button:hover{
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+svg{
+    fill: #959ba1;
+}
+
+.lang_bt{
+    margin-right: 1rem;
+    padding: .6rem;
+}.square_bt{
+    border: 2px solid #959ba1;
+    width: 2.2rem;
+    height: 2.2rem;
+}
+.square_bt>svg{
+    height: 60%;
+}
+
+.text{
+    width: 100%;
+    padding-bottom: 80px;
+}
+textarea{
+    max-width: 100%;
+
+    background-color: transparent;
+    border: none;
+
+    resize: none;
+    outline: none;
+    padding: 1rem;
+    color: white;
+
+    font-weight: 600;
+    
+}.botton_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    position: absolute;
+
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+    padding: 1.5rem;
+}.botton_menu .square_bt{
+    margin-right: .4rem;
+}

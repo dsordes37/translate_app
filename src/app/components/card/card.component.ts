@@ -9,6 +9,11 @@ export class CardComponent implements OnInit {
 
   @Input()
   card_type:string='input';
+  
+  @Input()
+  input:any;
+
+ 
 
 
   constructor() { }
@@ -20,13 +25,16 @@ export class CardComponent implements OnInit {
   }
 
   
+
+  
   
 
   getTexto(){
-    let text:HTMLTextAreaElement|null=document.querySelector('textarea')
-    let texto=text?.value
+    let text:any=document.querySelector('textarea')
+    let texto=text.value
     console.log(texto)
     this.digitado.emit(texto)
+    
   }
   
 

@@ -1,8 +1,7 @@
 
-<h2> {{texto}} </h2>
 <main>
-  <app-card (digitado)="receber($event)" card_type="input"></app-card>
-  <app-card card_type="output"></app-card>
+  <app-input (text)="getText($event)"></app-input>
+  <app-output text="{{text}}"></app-output>
 </main>
 
 
