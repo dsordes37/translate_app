@@ -22,5 +22,14 @@ export class OutputComponent implements OnInit {
     
   }
 
+  getSource(){
+    let source:any=document.querySelector('#outputText');
+    return source
+  }
+
+  copyText(){
+    const source=this.getSource()
+    navigator.clipboard.writeText(source.value)
+  }
   
 }

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output, Input} from '@angular/core';
+import { AudioApiService } from 'src/app/services/audio-api.service';
 
 @Component({
   selector: 'app-input',
@@ -17,10 +18,10 @@ export class InputComponent implements OnInit {
 
   textLengh:number=0;
 
-  constructor() { }
+  constructor(private service:AudioApiService) { }
 
   ngOnInit(): void {
-    this.run()
+    //this.run()
     this.processChange = this.debounce(() => this.saveInput());
     this.countTextLengh()
     
@@ -55,14 +56,18 @@ export class InputComponent implements OnInit {
   }
 
 
-  //TRABALHANDO AQUI <<<<===============================================================
   copyText(){
-    let source=this.getSource().then((res:any)=>{
-      navigator.clipboard.writeText(res.value);
-    });
-
+    const source=this.getSource()
+    navigator.clipboard.writeText(source.value)
   }
-  //<<<<<==================================================================================
 
+  async audio(){
+    console.log("carregando...")
+    await this.service.run()
+    console.log("carregado")
+  }
+
+
+  
 }
 

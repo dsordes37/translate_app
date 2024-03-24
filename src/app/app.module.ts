@@ -12,6 +12,7 @@ import { OutputComponent } from './components/output/output.component'
 import {HttpClientModule} from '@angular/common/http'
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
