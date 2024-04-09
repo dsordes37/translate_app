@@ -25,22 +25,52 @@
     justify-content: space-between;
     padding: 0 1rem 2rem;
     border-bottom: 1px solid #959ba1;
-}button{
+    position: relative;
+    
+}header ul{
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    background-color: #212936;
+    height: 10rem;
+    overflow-y: scroll;
+    list-style: none;
+
+    padding: .5rem;
+    border: 1px solid #959ba1;
+    border-radius: 1rem 0 0 1rem;
+    
+}
+
+.btn{
     background-color: transparent;
     border: none;
     color: #959ba1;
     font-weight: 600;
     cursor: pointer;
     border-radius: .5rem;
+
     
-}button:hover, .selected{
+    
+}.btn:hover, .selected{
     background-color: rgba(255, 255, 255, 0.137);
     
 }.selected{
     color: white;
     transition: .7s;
+}.selected>svg{
+    fill: white;
+    
 }
 
+input.btn{
+    width: 7rem;  
+}
+
+input.btn.selected::placeholder{
+    color:white;
+}
+ 
 svg{
     fill: #959ba1;
 }
@@ -48,7 +78,11 @@ svg{
 .lang_bt{
     margin-right: 1rem;
     padding: .6rem;
-}.square_bt{
+    
+}.lang_bt>svg{
+    width: .8rem;
+}
+.square_bt{
     border: 2px solid #959ba1;
     width: 2.2rem;
     height: 2.2rem;
@@ -89,18 +123,18 @@ textarea{
 }.run{
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     gap: 0.5rem;
-}.run>button{
+}.run>.btn{
     color: white;
     background-color: #3662E3;
     border: 1px solid #7CA9F3;
     padding: .7rem 1rem;
     border-radius: .7rem;
-}.run>button::first-letter{
+}.run>.btn::first-letter{
     text-decoration: 2px underline;
 }
-.run>button:hover{
+.run>.btn:hover{
     background-color: #5677db;
 }.run>span{
     color: #959ba1;

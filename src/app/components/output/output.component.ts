@@ -24,6 +24,8 @@ export class OutputComponent implements OnInit, OnChanges{
 
   btStatus:boolean[]=[false, true, false]
 
+  listVisible=false
+
   
 
   constructor() {
@@ -70,6 +72,15 @@ export class OutputComponent implements OnInit, OnChanges{
 
   switchLang(){
     this.switch.emit()
+  }
+
+
+  showAndHideList(){
+    if(this.listVisible){
+      this.listVisible=false
+    }else{
+      this.listVisible=true
+    }
   }
 
   

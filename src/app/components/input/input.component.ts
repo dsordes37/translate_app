@@ -27,6 +27,8 @@ export class InputComponent implements OnInit, OnChanges {
 
   btStatus=[true, false, false]
 
+  listVisible=false
+
 
   constructor(private service:AudioApiService) { }
 
@@ -73,13 +75,23 @@ export class InputComponent implements OnInit, OnChanges {
     }else{
       this.btStatus=[false, false, true]
       this.lang3=this.langList[id]
+      
     }
 
     //this.newToLang.emit(this.langList[id].id)
   }
 
   emitLang(id:any){
+    console.log(id)
     this.newFromLang.emit(this.langList[id].id)
+  }
+
+  showAndHideList(){
+    if(this.listVisible){
+      this.listVisible=false
+    }else{
+      this.listVisible=true
+    }
   }
 
   

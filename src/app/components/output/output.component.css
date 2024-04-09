@@ -25,7 +25,26 @@
     justify-content: space-between;
     padding: 0 1rem 2rem;
     border-bottom: 1px solid #959ba1;
-}button{
+    position: relative;
+}header ul{
+    position: absolute;
+    top: 2.5rem;
+    right: 12rem;
+    background-color: #212936;
+    height: 10rem;
+    overflow-y: scroll;
+    list-style: none;
+
+    padding: .5rem;
+    border: 1px solid #959ba1;
+    border-radius: 1rem 0 0 1rem;
+    
+}.selected>svg{
+    fill: white;
+    
+}
+
+button{
     background-color: transparent;
     border: none;
     color: #959ba1;
@@ -49,7 +68,11 @@ svg{
     margin-right: 1rem;
     padding: .6rem;
 
-}.square_bt{
+}.lang_bt>svg{
+    width: .8rem;
+}
+
+.square_bt{
     border: 2px solid #959ba1;
     width: 2.2rem;
     height: 2.2rem;
