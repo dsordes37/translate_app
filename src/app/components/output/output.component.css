@@ -33,8 +33,12 @@
     cursor: pointer;
     border-radius: .5rem;
     
-}button:hover{
+}button:hover, .selected{
     background-color: rgba(255, 255, 255, 0.137);
+    
+}.selected{
+    color: white;
+    transition: .7s;
 }
 
 svg{
@@ -44,6 +48,7 @@ svg{
 .lang_bt{
     margin-right: 1rem;
     padding: .6rem;
+
 }.square_bt{
     border: 2px solid #959ba1;
     width: 2.2rem;
@@ -73,7 +78,7 @@ textarea{
 }.botton_menu{
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
 
     position: absolute;
 
