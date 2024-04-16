@@ -2,7 +2,7 @@
     font-size: clamp(.8rem, 1.5vw, 1rem);
 }
 .container{
-
+  
     min-height: 18rem;
     width: clamp( 250px ,90vw, 35rem);
     
@@ -40,6 +40,9 @@
     border: 1px solid #959ba1;
     border-radius: 1rem 0 0 1rem;
     
+}header>div{
+    display: flex;
+    gap: .5rem;
 }
 
 .btn{
@@ -76,7 +79,6 @@ svg{
 }
 
 .lang_bt{
-    margin-right: 1rem;
     padding: .6rem;
     
 }.lang_bt>svg{

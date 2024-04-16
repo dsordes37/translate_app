@@ -16,11 +16,14 @@ export class OutputComponent implements OnInit, OnChanges{
 
   @Output() switch=new EventEmitter
 
-  langList=langs
+  
+  langList=langs;
 
-  lang1=this.langList[0];
-  lang2=this.langList[1];
-  lang3=this.langList[2];
+  //del=this.langList.shift();
+
+  lang1=this.langList[1];
+  lang2=this.langList[2];
+  lang3=this.langList[3];
 
   btStatus:boolean[]=[false, true, false]
 
@@ -53,9 +56,9 @@ export class OutputComponent implements OnInit, OnChanges{
   }
 
   select_lang(id:any){
-    if(id=='0'){
+    if(id=='1'){
       this.btStatus=[true, false, false]
-    }else if(id=='1'){
+    }else if(id=='2'){
       this.btStatus=[false, true, false]
     }else{
       this.btStatus=[false, false, true]
@@ -66,7 +69,6 @@ export class OutputComponent implements OnInit, OnChanges{
   }
 
   emitLang(id:any){
-    console.log(id)
     this.newToLang.emit(this.langList[id].id)
   }
 

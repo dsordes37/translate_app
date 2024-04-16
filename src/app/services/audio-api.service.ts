@@ -14,5 +14,5 @@ export class AudioApiService {
     
   }
 
-  run(){console.log('olá mundo')}
+  run(){}
 }

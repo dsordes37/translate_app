@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
   text:string='';
   translation?:translationModel;
 
-  fromLang:number=3;
-  toLang:number=4;
+  fromLang:number=1;
+  toLang:number=2;
 
   langList=langs
   

@@ -32,7 +32,6 @@ export class CardComponent implements OnInit {
   getTexto(){
     let text:any=document.querySelector('textarea')
     let texto=text.value
-    console.log(texto)
     this.digitado.emit(texto)
     
   }

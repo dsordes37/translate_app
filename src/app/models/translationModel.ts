@@ -1,5 +1,6 @@
 export type translationModel={
     responseData:{
-        translatedText:string
+        translatedText:string;
+        detectedLanguage?:string;
     }
 }

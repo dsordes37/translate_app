@@ -3,56 +3,51 @@ import { language } from "src/app/models/language"
 export const langs:language[]=[
     {
         id:0,
-        name:'english',
-        code:'en',
-        status:''
-    },
-    {
+        name:'detected language',
+        code:'Autodetect'
+    },{
         id:1,
-        name:'french',
-        code:'fr',
-        status:''
+        name:'english',
+        code:'en'
     },
     {
         id:2,
-        name:'spanish',
-        code:'es',
-        status:''
+        name:'french',
+        code:'fr'
     },
     {
         id:3,
-        name:'portuguese',
-        code:'pt-br',
-        status:''
+        name:'spanish',
+        code:'es'
     },
     {
         id:4,
-        name:'german',
-        code:'de',
-        status:''
+        name:'portuguese',
+        code:'pt-br'
     },
     {
         id:5,
-        name:'italian',
-        code:'it',
-        status:''
+        name:'german',
+        code:'de'
     },
     {
         id:6,
-        name:'greek',
-        code:'el',
-        status:''
+        name:'italian',
+        code:'it'
     },
     {
         id:7,
-        name:'russian',
-        code:'ru',
-        status:''
+        name:'greek',
+        code:'el'
     },
     {
         id:8,
+        name:'russian',
+        code:'ru'
+    },
+    {
+        id:9,
         name:'japanese',
-        code:'ja',
-        status:''
+        code:'ja'
     }
 ]

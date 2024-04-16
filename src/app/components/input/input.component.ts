@@ -21,11 +21,12 @@ export class InputComponent implements OnInit, OnChanges {
 
   langList=langs;
 
-  lang1=this.langList[0];
-  lang2=this.langList[1];
-  lang3=this.langList[2];
+  lang0=this.langList[0];
+  lang1=this.langList[1];
+  lang2=this.langList[2];
+  lang3=this.langList[3];
 
-  btStatus=[true, false, false]
+  btStatus=[false ,true, false, false]
 
   listVisible=false
 
@@ -69,11 +70,13 @@ export class InputComponent implements OnInit, OnChanges {
 
   select_lang(id:any){
     if(id=='0'){
-      this.btStatus=[true, false, false]
+      this.btStatus=[true, false, false, false]
     }else if(id=='1'){
-      this.btStatus=[false, true, false]
+      this.btStatus=[false, true, false, false]
+    }else if(id=='2'){
+      this.btStatus=[false, false, true, false]
     }else{
-      this.btStatus=[false, false, true]
+      this.btStatus=[false,false, false, true]
       this.lang3=this.langList[id]
       
     }
@@ -81,8 +84,9 @@ export class InputComponent implements OnInit, OnChanges {
     //this.newToLang.emit(this.langList[id].id)
   }
 
+
+  //====================================================================================================
   emitLang(id:any){
-    console.log(id)
     this.newFromLang.emit(this.langList[id].id)
   }
 

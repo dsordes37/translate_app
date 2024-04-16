@@ -39,7 +39,12 @@
     border: 1px solid #959ba1;
     border-radius: 1rem 0 0 1rem;
     
-}.selected>svg{
+}header>div{
+    display: flex;
+    gap: .5rem;
+}
+
+.selected>svg{
     fill: white;
     
 }
@@ -65,7 +70,6 @@ svg{
 }
 
 .lang_bt{
-    margin-right: 1rem;
     padding: .6rem;
 
 }.lang_bt>svg{
