@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output, Input, OnChanges, SimpleChanges} from '@angular/core';
-import { AudioApiService } from 'src/app/services/audio-api.service';
 import { langs } from 'src/data/langs';
 
 @Component({
@@ -14,6 +13,8 @@ export class InputComponent implements OnInit, OnChanges {
   @Output() newFromLang= new EventEmitter();
 
   @Input() fromLang:string='0';
+
+  @Input() detecLang:any='0';
 
   processChange:any;
 
@@ -31,10 +32,10 @@ export class InputComponent implements OnInit, OnChanges {
   listVisible=false
 
 
-  constructor(private service:AudioApiService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    //this.run()
+    this.run()
     this.countTextLengh()
     this.select_lang(this.fromLang)
 
@@ -81,13 +82,16 @@ export class InputComponent implements OnInit, OnChanges {
       
     }
 
-    //this.newToLang.emit(this.langList[id].id)
+   
   }
 
 
-  //====================================================================================================
+  
   emitLang(id:any){
     this.newFromLang.emit(this.langList[id].id)
+    if(id!=0){
+      this.detecLang=''
+    }
   }
 
   showAndHideList(){

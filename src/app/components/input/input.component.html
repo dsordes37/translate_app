@@ -1,29 +1,31 @@
 <div class="container">
     <header>
-        <div>
-            <button class="lang_bt btn" [ngClass]="{'selected':btStatus[0]}" (click)="emitLang(lang0.id)">{{lang0.name}}</button>
-            <button class="lang_bt btn" [ngClass]="{'selected':btStatus[1]}" (click)="emitLang(lang1.id)">{{lang1.name}}</button>
-            <button class="lang_bt btn" [ngClass]="{'selected':btStatus[2]}" (click)="emitLang(lang2.id)">{{lang2.name}}</button>
-            <button class="lang_bt btn relative" [ngClass]="{'selected':btStatus[3]}" (click)="showAndHideList()">{{lang3.name}}
-                <svg *ngIf="listVisible; else downChevron" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
+    
+        <button class="lang_bt btn" [ngClass]="{'selected':btStatus[0]}" (click)="emitLang(lang0.id)">{{lang0.name}}</button>
+        <button class="lang_bt btn" [ngClass]="{'selected':btStatus[1]}" (click)="emitLang(lang1.id)">{{lang1.name}}</button>
+        <button class="lang_bt btn" [ngClass]="{'selected':btStatus[2]}" (click)="emitLang(lang2.id)">{{lang2.name}}</button>
+        <button class="lang_bt btn relative" [ngClass]="{'selected':btStatus[3]}" (click)="showAndHideList()">{{lang3.name}}
+            <svg *ngIf="listVisible; else downChevron" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
 
-                <ng-template #downChevron>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
-                </ng-template>
-            </button>
+            <ng-template #downChevron>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+            </ng-template>
+
             <ul *ngIf="listVisible">
                 <li *ngFor="let lang of langList">
                     <button class="btn lang_bt" (click)="emitLang(lang.id); showAndHideList()">{{lang.name}}</button>
                 </li>
             </ul>
-            <!--<input list="langs" class="lang_bt btn" [ngClass]="{'selected':btStatus[2]}" placeholder="{{lang3.name}}" >
-            <datalist  aria-activedescendant="">
-                <option *ngFor="let item of langList" value="{{item.name}}" (click)="emitLang(item.id)" ></option>
-            </datalist>
-            <ul id="langs">
-                <button *ngFor="let item of langList" value="{{item.name}}" (click)="emitLang(item.id)"></button>
-            </ul>-->
-        </div>
+        </button>
+        
+        <!--<input list="langs" class="lang_bt btn" [ngClass]="{'selected':btStatus[2]}" placeholder="{{lang3.name}}" >
+        <datalist  aria-activedescendant="">
+            <option *ngFor="let item of langList" value="{{item.name}}" (click)="emitLang(item.id)" ></option>
+        </datalist>
+        <ul id="langs">
+            <button *ngFor="let item of langList" value="{{item.name}}" (click)="emitLang(item.id)"></button>
+        </ul>-->
+    
     </header>
     <div class="text">
         <textarea name="" id="text" cols="60" rows="6" maxlength="500" (input)="countTextLengh()">Hello, how are you ?</textarea>
@@ -36,6 +38,7 @@
             <button class="square_bt btn"  (click)="copyText()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 464H288c8.8 0 16-7.2 16-16V384h48v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h64v48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM224 304H448c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H224c-8.8 0-16 7.2-16 16V288c0 8.8 7.2 16 16 16zm-64-16V64c0-35.3 28.7-64 64-64H448c35.3 0 64 28.7 64 64V288c0 35.3-28.7 64-64 64H224c-35.3 0-64-28.7-64-64z"/></svg>
             </button>
+            <button *ngIf="detecLang!=0" class="detec" (click)="emitLang(detecLang)">{{langList[detecLang].name}}</button>
         </div>
         <div class="run">
             <span>{{textLengh}}/500</span>

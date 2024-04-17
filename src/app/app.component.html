@@ -1,6 +1,6 @@
 
 <main>
-  <app-input fromLang="{{fromLang}}" (text)="getText($event)" (newFromLang)="getFromLang($event)"></app-input>
+  <app-input fromLang="{{fromLang}}" detecLang="{{detecLangId}}" (text)="getText($event)" (newFromLang)="getFromLang($event)"></app-input>
    
   <app-output toLang="{{toLang}}" text="{{text}}" (newToLang)="getToLang($event)" (switch)="switchLang()" ></app-output>
 </main>

@@ -22,15 +22,15 @@
     
 }header{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .5rem;
     padding: 0 1rem 2rem;
     border-bottom: 1px solid #959ba1;
-    position: relative;
     
 }header ul{
     position: absolute;
     top: 2.5rem;
-    right: 2.5rem;
+    right: 1rem;
     background-color: #212936;
     height: 10rem;
     overflow-y: scroll;
@@ -43,6 +43,8 @@
 }header>div{
     display: flex;
     gap: .5rem;
+}.relative{
+    position: relative;
 }
 
 .btn{
@@ -143,4 +145,16 @@ textarea{
     font-weight: 200;
 }.botton_menu .square_bt{
     margin-right: .4rem;
+}.detec{
+    color: #3662E3;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}.detec:hover{
+    color: #7CA9F3;
+    text-decoration: underline;
+    
 }

@@ -25,7 +25,6 @@
     justify-content: space-between;
     padding: 0 1rem 2rem;
     border-bottom: 1px solid #959ba1;
-    position: relative;
 }header ul{
     position: absolute;
     top: 2.5rem;
@@ -42,6 +41,9 @@
 }header>div{
     display: flex;
     gap: .5rem;
+    flex-wrap: wrap;
+}.relative{
+    position: relative;
 }
 
 .selected>svg{

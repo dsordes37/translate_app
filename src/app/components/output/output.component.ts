@@ -42,7 +42,6 @@ export class OutputComponent implements OnInit, OnChanges{
   ngOnChanges(changes: SimpleChanges): void {
     this.select_lang(this.toLang)
   }
-
   
 
   getSource(){

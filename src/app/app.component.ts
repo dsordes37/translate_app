@@ -11,6 +11,8 @@ import { langs } from 'src/data/langs';
 export class AppComponent implements OnInit {
   title = 'translate_app';
   text:string='';
+  detecLangId:number=0
+
   translation?:translationModel;
 
   fromLang:number=1;
@@ -56,9 +58,12 @@ export class AppComponent implements OnInit {
   }
 
   switchLang(){
-    let switchSpace=this.toLang
-    this.toLang=this.fromLang
-    this.fromLang=switchSpace
+    if(this.fromLang!=0){
+      let switchSpace=this.toLang
+      this.toLang=this.fromLang
+      this.fromLang=switchSpace
+    }
+    
   }
 
 
@@ -72,10 +77,15 @@ export class AppComponent implements OnInit {
         next:(response)=>{
           this.translation={
             responseData:{
-              translatedText:response.responseData.translatedText
+              translatedText:response.responseData.translatedText,
+              detectedLanguage:response.responseData.detectedLanguage||''
             }
           }
           this.text=this.translation.responseData.translatedText
+          let detecLang=this.translation.responseData.detectedLanguage
+          if(detecLang!=undefined){
+            this.detecLangId=this.langList.find(element=>element.code==detecLang)?.id||0
+          }
         },
         error:()=>console.log('not found')
       })}
